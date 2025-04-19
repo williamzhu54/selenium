@@ -2,6 +2,7 @@ package package1.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import poms.saucedemo.loginPage;
@@ -16,7 +17,9 @@ public class baseTest {
 
     @BeforeClass
     public void setup(){
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get(url);
         page = new pages();
