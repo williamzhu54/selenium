@@ -12,7 +12,7 @@ public class productsTest extends baseTest {
     private String pass = "secret_sauce";
 
     @Test
-    public void testProductsDashboard(){
+    public void testProductsDashboard() {
         productPage productsPage = loginPage.loginApp(username, pass);
         assertTrue(productsPage.isProductsDashboard());
 

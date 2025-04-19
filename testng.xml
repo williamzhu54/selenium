@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
     <test verbose="2" preserve-order="true" name="D:/UTSC/selenium_practice">
         <classes>
-            <class name="package1.SeleniumFirst">
-                <methods>
-                    <include name="login"/>
-                </methods>
-            </class>
             <class name="package1.tests.login.loginTest">
                 <methods>
                     <include name="testLoginErrorMessage"/>
