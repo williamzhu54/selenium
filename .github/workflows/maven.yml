@@ -35,8 +35,7 @@ jobs:
       uses: simple-elf/allure-report-action@master
       if: always()
       with:
-        gh_pages: gh-pages
-        allure_history: allure-history
+        gh_pages: main
         allure_results: allure-results
 
     - name: Publish test report
@@ -44,5 +43,4 @@ jobs:
       if: always()
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: allure-history
+        publish_branch: main
