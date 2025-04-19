@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/UTSC/selenium_practice">
+        <classes>
+            <class name="package1.SeleniumFirst">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="package1.tests.login.loginTest">
+                <methods>
+                    <include name="testLoginErrorMessage"/>
+                </methods>
+            </class>
+            <class name="package1.tests.products.productsTest">
+                <methods>
+                    <include name="testProductsDashboard"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
