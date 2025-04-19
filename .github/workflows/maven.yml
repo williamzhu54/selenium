@@ -31,9 +31,6 @@ jobs:
     - name: Run Tests with Maven
       run: mvn clean test
 
-    - name: Generate Report
-      run: allure generate
-
     - name: Build test report
       uses: simple-elf/allure-report-action@master
       if: always()
